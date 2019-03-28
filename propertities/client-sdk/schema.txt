@@ -1,0 +1,1344 @@
+GuestInfo {
+    // 姓名不能为空，长度在2到20之间。
+    String userName;
+
+    // 生日不能为空。
+    String birthday;
+
+    // 邮件地址不能为空。
+    String email;
+
+}
+
+KbsProperty {
+    // 标题，非空。
+    String kbsTitle;
+
+    // 知识所属BU，非空。
+    String kbsBU;
+
+    // 知识文章的ID，非空，kbsBU+kbsId 为唯一标识。
+    String kbsId;
+
+    // 知识文章的内容，非空
+    String kbsContent;
+
+    // 类目信息，如：集团业务-淘宝-淘宝应用-淘宝一键购常见问题，非空。
+    String kbsCategory;
+
+    // 
+    String keywords;
+
+    // 状态，非空
+    String status;
+
+    // 能否搜索，非空
+    String searchable;
+
+    // 
+    String attachment;
+
+    // 知识文章链接，非空。
+    String kbsLink;
+
+    // 版本信息，目前定义为时间戳，精确到ms，非空。
+    String kbsVersion;
+
+    // 创建小二唯一标识，如：stone.zl，非空。
+    String kbsCreator;
+
+    // 操作小二唯一标识，如：bokui.lbk，非空。
+    String kbsOperator;
+
+    // 
+    String extendsFiled1;
+
+    // 
+    String extendsFiled2;
+
+    // 
+    String extendsFiled3;
+
+    // 
+    String extendsFiled4;
+
+    // 
+    String extendsFiled5;
+
+}
+
+BlacklistInfo {
+    // 任务流水号
+    String serial_number;
+
+    // 姓名
+    String user_name;
+
+    // 身份证号
+    String user_cardNumber;
+
+    // 公积金账号
+    String user_account;
+
+    // 公积金账户状态
+    String user_accountState;
+
+    // 所属机构
+    String user_ssjg;
+
+    // 不良信用等级
+    String user_badLevel;
+
+    // 类型（不良、解除）
+    String user_badType;
+
+    // 提报原因（描述）
+    String user_badReason;
+
+    // 产生时间（新增、解除）
+    String user_badDate;
+
+    // 用户状态
+    String user_state;
+
+    // 上报机构码
+    String organ_number;
+
+    // 上报机构名称
+    String organ_name;
+
+    // 上报人姓名
+    String organ_operatorName;
+
+    // 上报人身份证号
+    String organ_operatorCardNumber;
+
+    // 审批人
+    String organ_spPeople;
+
+    // 审批时间
+    String organ_spDate;
+
+    // 机构联系人姓名
+    String organ_contacts;
+
+    // 机构联系人电话
+    String organ_contactsPhone;
+
+    // 上报时间
+    String organ_submitDate;
+
+}
+
+BillInfo {
+    // 票据信息，要求非空，JSON格式
+    String billData;
+
+    // 票据hash，非空
+    String pdfHash;
+
+    // 票据地址，非空
+    String pdfUrl;
+
+}
+
+InsPolicy {
+    // 保单号，非空，最大长度64
+    String policyNo;
+
+    // 机构保单号，最大长度64
+    String outPolicyNo;
+
+    // 总括订单号，最大长度100
+    String summaryPolicyNo;
+
+    // 产品编号，非空，最大长度100
+    String prodNo;
+
+    // 机构产品编号，最大长度100
+    String outProdNo;
+
+    // 保单状态，非空
+    int status;
+
+    // 保单类型，非空
+    int type;
+
+    // 投保时间，非空
+    Date insuredTime;
+
+    // 出单时间，非空
+    Date issueTime;
+
+    // 退保时间
+    Date surrenderTime;
+
+    // 保险起期，非空
+    Date effectStartTime;
+
+    // 保险止期，非空
+    Date effectEndTime;
+
+    // 保额，非空
+    Long sumInsured;
+
+    // 保险费率，非空
+    Double feeRate;
+
+    // 保费，非空
+    Long premium;
+
+    // 实付保费，非空
+    Long actualPremium;
+
+    // 投保份数
+    Long applyNum;
+
+    // 业务数据，最大长度1028
+    String bizData;
+
+    // 退保金额
+    Long surrenderFee;
+
+}
+
+InsPerson {
+    // 干系人编号，非空，最大长度64
+    String personNo;
+
+    // 干系人类型，非空
+    int type;
+
+    // 保单号，非空，最大长度64
+    String policyNo;
+
+    // 账户类型
+    int accountType;
+
+    // 账户id，最大长度64
+    String accountId;
+
+    // 账户名称，最大长度100
+    String accountName;
+
+    // 证件类型，非空，最大长度10
+    String certType;
+
+    // 证件号码，非空，最大长度64
+    String certNo;
+
+    // 证件名称，非空，最大长度100
+    String certName;
+
+    // 扩展字段，最大长度1028
+    String bizData;
+
+}
+
+InsBill {
+    // 业务订单号，非空，最大长度64
+    String insBizNo;
+
+    // 账单号，非空，最大长度64
+    String billNo;
+
+    // 账单类型，非空
+    int type;
+
+    // 机构资金账户类型，非空
+    int merchantAccountType;
+
+    // 机构资金账户ID，非空，最大长度64
+    String merchantAccountId;
+
+    // 对方资金账户类型，非空
+    int userAccountType;
+
+    // 对方资金账户ID，非空，最大长度64
+    String userAccountId;
+
+    // 发生时间，非空
+    Date payTime;
+
+    // 发生金额，非空
+    Long payAmount;
+
+    // 交易流水号，非空，最大长度64
+    String payFlowId;
+
+}
+
+BlacklistInfo_V2 {
+    // 任务流水号
+    String serial_number;
+
+    // 姓名
+    String user_name;
+
+    // 身份证号
+    String user_cardNumber;
+
+    // 公积金账号
+    String user_account;
+
+    // 公积金账户状态
+    String user_accountState;
+
+    // 所属机构
+    String user_ssjg;
+
+    // 不良信用等级
+    String user_badLevel;
+
+    // 类型（不良、解除）
+    String user_badType;
+
+    // 提报原因（描述）
+    String user_badReason;
+
+    // 产生时间（新增、解除）
+    String user_badDate;
+
+    // 用户状态
+    String user_state;
+
+    // 上报机构码
+    String organ_number;
+
+    // 上报机构名称
+    String organ_name;
+
+    // 上报人姓名
+    String organ_operatorName;
+
+    // 上报人身份证号
+    String organ_operatorCardNumber;
+
+    // 审批时间
+    String organ_spDate;
+
+    // 机构联系人姓名
+    String organ_contacts;
+
+    // 机构联系人电话
+    String organ_contactsPhone;
+
+    // 上报时间
+    String organ_submitDate;
+
+    // 洗白流水号
+    String whitewash_serial_number;
+
+    // 惩戒周期
+    String disciplinary_cycle;
+
+    // 惩戒结束时间(格式yyyy-mm-DD hh:MM:ss:SSS)
+    String organ_enddate;
+
+    // base64证据图片信息，多幅图片之间用“，”分隔
+    String evidencePic;
+
+    // 审批人姓名
+    String organ_spName;
+
+    // 审批人身份证号
+    String organ_spCardNumber;
+
+}
+
+UserBean16 {
+    // 姓名不能为空！
+    String userName;
+
+    // 密码不能为空!
+    String passWord;
+
+    // 日期不能为空!
+    Date birthday;
+
+    // 邮件不能为空!
+    String email;
+
+}
+
+UserBean17 {
+    // 姓名不能为空！
+    String userName;
+
+    // 密码不能为空!
+    String passWord;
+
+    // 日期不能为空!
+    Date birthday;
+
+    // 邮件不能为空!
+    String email;
+
+}
+
+TestInfo {
+    // 
+    int testId;
+
+}
+
+Point {
+    // 姓名不能为空，长度在2到20之间。
+    String userName;
+
+    // 是否当日生日
+    boolean birthDay;
+
+    // point
+    Long point;
+
+    // 当月购物次数
+    int buyNums;
+
+    // 退货次数
+    int backNums;
+
+    // 当月购物总金额
+    Double buyMoney;
+
+    // 退货总金额
+    Double backMondy;
+
+    // 信用卡还款次数
+    int billThisMonth;
+
+}
+
+BlacklistInfo_V3 {
+    // 任务流水号
+    String serial_number;
+
+    // 姓名
+    String user_name;
+
+    // 身份证号
+    String user_cardNumber;
+
+    // 公积金账号
+    String user_account;
+
+    // 公积金账户状态
+    String user_accountState;
+
+    // 所属机构
+    String user_ssjg;
+
+    // 不良信用等级
+    String user_badLevel;
+
+    // 类型（不良、解除）
+    String user_badType;
+
+    // 提报原因（描述）
+    String user_badReason;
+
+    // 产生时间（新增、解除）
+    String user_badDate;
+
+    // 用户状态
+    String user_state;
+
+    // 上报机构码
+    String organ_number;
+
+    // 上报机构名称
+    String organ_name;
+
+    // 上报人姓名
+    String organ_operatorName;
+
+    // 上报人身份证号
+    String organ_operatorCardNumber;
+
+    // 审批时间
+    String organ_spDate;
+
+    // 机构联系人姓名
+    String organ_contacts;
+
+    // 机构联系人电话
+    String organ_contactsPhone;
+
+    // 上报时间
+    String organ_submitDate;
+
+    // 洗白流水号
+    String whitewash_serial_number;
+
+    // 惩戒周期
+    String disciplinary_cycle;
+
+    // 惩戒结束时间(格式yyyy-mm-DD hh:MM:ss:SSS)
+    String organ_enddate;
+
+    // base64证据图片信息，多幅图片之间用“，”分隔
+    String evidencePic;
+
+    // 审批人姓名
+    String organ_spName;
+
+    // 审批人身份证号
+    String organ_spCardNumber;
+
+    // 失信行为失信行为(1(1--提取失信行为提取失信行为、、	22--贷款失信行为贷款失信行为	、、33--贷后还款失信行为贷后还款失信行为	、、44--	缴存失信行为缴存失信行为	))
+    String user_bad_behavior;
+
+    // 失信行为细则，多条细则用“，”分隔
+    String bad_behavior_detail;
+
+    // 失信行为细则，多条细则用“，”分隔
+    String bad_level_detail;
+
+}
+
+BlacklistInfo_V4 {
+    // 任务流水号
+    String serial_number;
+
+    // 姓名
+    String user_name;
+
+    // 身份证号
+    String user_cardNumber;
+
+    // 公积金账号
+    String user_account;
+
+    // 公积金账户状态
+    String user_accountState;
+
+    // 所属机构
+    String user_ssjg;
+
+    // 不良信用等级
+    String user_badLevel;
+
+    // 类型（不良、解除）
+    String user_badType;
+
+    // 提报原因（描述）
+    String user_badReason;
+
+    // 产生时间（新增、解除）
+    String user_badDate;
+
+    // 用户状态
+    String user_state;
+
+    // 上报机构码
+    String organ_number;
+
+    // 上报机构名称
+    String organ_name;
+
+    // 上报人姓名
+    String organ_operatorName;
+
+    // 上报人身份证号
+    String organ_operatorCardNumber;
+
+    // 审批时间
+    String organ_spDate;
+
+    // 机构联系人姓名
+    String organ_contacts;
+
+    // 机构联系人电话
+    String organ_contactsPhone;
+
+    // 上报时间
+    String organ_submitDate;
+
+    // 洗白流水号
+    String whitewash_serial_number;
+
+    // 惩戒周期
+    String disciplinary_cycle;
+
+    // 惩戒结束时间(格式yyyy-mm-DD hh:MM:ss:SSS)
+    String organ_enddate;
+
+    // base64证据图片信息
+    File evidencePic1;
+
+    // 审批人姓名
+    String organ_spName;
+
+    // 审批人身份证号
+    String organ_spCardNumber;
+
+    // 失信行为失信行为(1(1--提取失信行为提取失信行为、、	22--贷款失信行为贷款失信行为	、、33--贷后还款失信行为贷后还款失信行为	、、44--	缴存失信行为缴存失信行为	))
+    String user_bad_behavior;
+
+    // 失信行为细则，多条细则用“，”分隔
+    String bad_behavior_detail;
+
+    // 失信行为细则，多条细则用“，”分隔
+    String bad_level_detail;
+
+    // base64证据图片信息
+    File evidencePic2;
+
+    // base64证据图片信息
+    File evidencePic3;
+
+    // base64证据图片信息
+    File evidencePic4;
+
+    // base64证据图片信息
+    File evidencePic5;
+
+    // base64证据图片信息
+    File evidencePic6;
+
+    // base64证据图片信息
+    File evidencePic7;
+
+    // base64证据图片信息
+    File evidencePic8;
+
+    // base64证据图片信息
+    File evidencePic9;
+
+    // base64证据图片信息
+    File evidencePic10;
+
+}
+
+MirealTokenInfo {
+    // 上一次写入时的txHash值
+    String pre_txHash;
+
+    // 用户id
+    String user_id;
+
+    // 操作类型
+    String op_type;
+
+    // 操作token个数
+    String count;
+
+    // 公钥id
+    String pub_key_id;
+
+    // time
+    String op_time;
+
+}
+
+DepositProve {
+    // 编号，最大长度32
+    String random_num;
+
+    // 姓名，最大长度16
+    String user_name;
+
+    // 身份证号，最大长度18
+    String user_card_number;
+
+    // 公积金账号，最大长度16
+    String user_account;
+
+    // 所属机构代码，最大长度64
+    String organ_code;
+
+    // 所属机构名称，最大长度128
+    String organ_name;
+
+    // 上链时间，最大长度23
+    String submit_time;
+
+    // 缴存证明pdf文件
+    File jc_prove;
+
+    // 缴存证明状态，最大长度2
+    String jc_prove_status;
+
+    // 缴存证明类型，最大长度2
+    String jc_prove_type;
+
+    // 类型 时间戳
+    Long time_stamp;
+
+    // 查询时间，最大长度23
+    String query_time;
+
+    // 扩展字段1，最大长度64
+    String expand_field1;
+
+    // 扩展字段2，最大长度64
+    String expand_field2;
+
+    // 扩展字段3，最大长度64
+    String expand_field3;
+
+    // 扩展字段4，最大长度64
+    String expand_field4;
+
+    // 扩展字段5
+    File expand_field5;
+
+}
+
+BIBLIOS {
+    // 全局馆ID
+    String globalid;
+
+    // 记录号
+    Long bookrecno;
+
+    // 书目格式
+    String marcformat;
+
+    // 资料类型
+    int booktype;
+
+    // 出版地
+    String address;
+
+    // 著者
+    String author;
+
+    // 分类号
+    String classno;
+
+    // 出版日期
+    String pubdate;
+
+    // ISBN代码，国际标准书号
+    String isbn;
+
+    // ISSN代码，国际标准刊号
+    String issn;
+
+    // 价格
+    String price;
+
+    // 出版社
+    String publisher;
+
+    // 尺寸
+    String booksize;
+
+    // 题名
+    String title;
+
+    // 版次
+    String edition;
+
+    // 主题
+    String subject;
+
+}
+
+BIBLIOSV1 {
+    // 全局馆ID
+    String globalid;
+
+    // 记录号
+    Long bookrecno;
+
+    // 书目格式
+    String marcformat;
+
+    // 资料类型
+    int booktype;
+
+    // 出版地
+    String address;
+
+    // 著者
+    String author;
+
+    // 分类号
+    String classno;
+
+    // 出版日期
+    String pubdate;
+
+    // ISBN代码，国际标准书号
+    String isbn;
+
+    // ISSN代码，国际标准刊号
+    String issn;
+
+    // 价格
+    String price;
+
+    // 出版社
+    String publisher;
+
+    // 尺寸
+    String booksize;
+
+    // 题名
+    String title;
+
+    // 版次
+    String edition;
+
+    // 主题
+    String subject;
+
+}
+
+HOLDINGV2 {
+    // 全局馆ID
+    String globalid;
+
+    // 书目记录号
+    Long bookrecno;
+
+    // 条码号
+    String barcode;
+
+    // 索书号
+    String callno;
+
+    // 文献所有馆
+    String orglib;
+
+    // 文献所有馆藏地
+    String orglocal;
+
+    // 馆藏产生日期
+    Date indate;
+
+    // 单册价格
+    Float singleprice;
+
+    // 整套价格
+    Float totalprice;
+
+    // 装帧形式
+    String bindinfo;
+
+    // 卷册数量
+    Long volnum;
+
+    // 卷册信息
+    String volinfo;
+
+    // 采访价格
+    Float acqprice;
+
+}
+
+RETURN_BOOKV1 {
+    // 操作类型（借、还、续借）
+    String logtype;
+
+    // 全局馆ID
+    String globalid;
+
+    // 用户登录标识loginid
+    String userid;
+
+    // 读者证号
+    String rdid;
+
+    // 图书条码全局馆ID
+    String barcode_globalid;
+
+    // 条码号
+    String barcode;
+
+    // 处理时间
+    Timestamp duetime;
+
+    // 借书时间
+    Date loan_time;
+
+    // 应还时间
+    Date return_time;
+
+    // 还书时间
+    Date return_time2;
+
+    // 当前还回地点
+    String curlocal;
+
+}
+
+READER {
+    // 全局馆ID
+    String globalid;
+
+    // 读者证号
+    String rdid;
+
+    // 读者名称
+    String rdname;
+
+    // 读者身份证号
+    String rdcertify;
+
+    // 性别  1=男 0 =女
+    int rdsex;
+
+    // 读者流通类型
+    String rdtype;
+
+    // 读者通借通还流通类型
+    String rdlibtype;
+
+    // 开户馆
+    String rdlib;
+
+    // 读者证有效启用日期
+    Date rdstartdate;
+
+    // 读者证有效期终止日期
+    Date rdenddate;
+
+}
+
+ReceiptInfo {
+    // 销售方秘钥
+    String xsf_key;
+
+    // 购买方秘钥
+    String gmf_key;
+
+    // 销售方纳税人识别号
+    String xsf_nsrsbh;
+
+    // 购买方纳税人识别号
+    String gmf_nsrsbh;
+
+    // 发票内容
+    String fpxx;
+
+    // 发票代码
+    String fpdm;
+
+    // 发票号码
+    String fphm;
+
+    // 开票日期
+    Date kprq;
+
+    // 哈希值
+    String hash_str;
+
+}
+
+ReceiptInfo_v2 {
+    // 销售方密钥 
+    String xsf_key;
+
+    // 购买方秘钥
+    String gmf_key;
+
+    // 销售方纳税人识别号
+    String xsf_nsrsbh;
+
+    // 购买方纳税人识别号
+    String gmf_nsrsbh;
+
+    // 发票内容
+    String fpxx;
+
+    // 发票代码
+    String fpdm;
+
+    // 发票号码
+    String fphm;
+
+    // 开票日期
+    Date kprq;
+
+    // 哈希值
+    String hash_str;
+
+    // 备注
+    String remark;
+
+}
+
+InvoiceInfo {
+    // 业务类型
+    String ywlx;
+
+    // 当前发票密钥
+    String fp_key_gmf;
+
+    // 发票内容
+    String fpxx;
+
+    // 哈希值
+    String hash_str;
+
+    // 预留字段
+    String ylzd;
+
+    // 报文版本
+    String bbh;
+
+    // 购买方纳税人识别号
+    String gmf_nsrsbh;
+
+    // 发票代码
+    String fpdm;
+
+    // 发票号码
+    String fphm;
+
+    // 原发票代码
+    String yfpdm;
+
+    // 原发票号码 
+    String yfphm;
+
+    // 开票日期
+    Date kprq;
+
+    // 当前发票密钥
+    String fp_key_xsf;
+
+}
+
+InvoiceInfo_V1 {
+    // 业务类型
+    String ywlx;
+
+    // 秘钥
+    String fpKeyXsf;
+
+    // 秘钥
+    String fpKeyGmf;
+
+    // 内容
+    String fpxx;
+
+    // 哈希值
+    String hash;
+
+    // 检索信息
+    String jsxx;
+
+    // 签名
+    String sign;
+
+    // 报文版本
+    String bbh;
+
+}
+
+InvoiceInfo_V2 {
+    // ywlx，长度必须小于1000，不能为空
+    String ywlx;
+
+    // fpKeyXsf，长度必须小于1000，不能为空
+    String fpKeyXsf;
+
+    // fpKeyGmf，长度必须小于1000，不能为空
+    String fpKeyGmf;
+
+    // fpxx，长度必须小于500000，不能为空
+    String fpxx;
+
+    // hash，长度必须小于1000，不能为空
+    String hash;
+
+    // jsxx，长度必须小于10000，不能为空
+    String jsxx;
+
+    // sign，长度必须小于1000，不能为空
+    String sign;
+
+    // bbh，长度必须小于1000，不能为空
+    String bbh;
+
+}
+
+MedicalInvoiceReimbursement {
+    // 发票代码
+    String invoiceCode;
+
+    // 发票号码
+    String invoiceNo;
+
+    // 关联的票据hash
+    String invoiceHash;
+
+    // 保险公司名称
+    String insuranceCompany;
+
+    // 报案号
+    String reportNo;
+
+    // 报销状态
+    String reimbursementStatus;
+
+    // 报销金额单位为分
+    int reimbursementAmount;
+
+}
+
+MedicalInvoiceInvalidRecord {
+    // 发票号码
+    String invoiceNo;
+
+    // 发票代码
+    String invoiceCode;
+
+    // 作废记录关联的票据hash
+    String invoiceHash;
+
+    // 作废原因
+    String reason;
+
+}
+
+MedicalInvoiceInfo {
+    // 发票省份,
+    String invoiceProvince;
+
+    // 医院编码,
+    String hospitalCode;
+
+    // 发票号码,
+    String invoiceNo;
+
+    // 发票代码 + 发票号码唯一区别一张发票
+    String invoiceCode;
+
+    // 开票时间,yyyyMMdd HH:mm:ss
+    String invoiceDate;
+
+    // 发票类型,FINANCIAL_ELECTRONIC_BILL
+    String invoiceType;
+
+    // 证件类型编码,默认填写：IDENTITY_CARD
+    String idTypeCode;
+
+    // 证件号码HASH值,身份证号码的HASH值：MD5(idNo)
+    String idHash;
+
+    // 门诊票据填就诊日期，住院票据填入院时间
+    String visitDateStart;
+
+    // 门诊票据填就诊日期，住院票据填出院时间
+    String visitDateEnd;
+
+    // 密文
+    String encryContent;
+
+}
+
+T_cf_xsxx {
+    // 处方统一编号，最大长度127
+    String cftybh;
+
+    // 院内处方唯一号，最大长度127
+    String cfxh;
+
+    // 平台流水号，最大长度127
+    String ptlsh;
+
+    // 发药说明，最大长度127
+    String fysm;
+
+    // 发药时间，最大长度32
+    String fysj;
+
+    // 医院代码，最大长度32
+    String yydm;
+
+}
+
+T_cf_lzxx {
+    // 签章后处方文件Id，最大长度127
+    String cfqzpdfid;
+
+    // 院内处方唯一号，最大长度127
+    String cfxh;
+
+    // 处方信息对象数组字符串，最大长度100K
+    String cfmxxx;
+
+    // 医院代码，最大长度32
+    String yydm;
+
+}
+
+BlacklistInfoV2 {
+    // 任务流水号
+    String serial_number;
+
+    // 姓名
+    String user_name;
+
+    // 身份证号
+    String user_cardNumber;
+
+    // 公积金账号
+    String user_account;
+
+    // 公积金账户状态
+    String user_accountState;
+
+    // 所属机构
+    String user_ssjg;
+
+    // 不良信用等级
+    String user_badLevel;
+
+    // 类型（不良、解除）
+    String user_badType;
+
+    // 提报原因（描述）
+    String user_badReason;
+
+    // 产生时间（新增、解除）
+    String user_badDate;
+
+    // 用户状态
+    String user_state;
+
+    // 上报机构码
+    String organ_number;
+
+    // 上报机构名称
+    String organ_name;
+
+    // 上报人姓名
+    String organ_operatorName;
+
+    // 上报人身份证号
+    String organ_operatorCardNumber;
+
+    // 审批时间
+    String organ_spDate;
+
+    // 机构联系人姓名
+    String organ_contacts;
+
+    // 机构联系人电话
+    String organ_contactsPhone;
+
+    // 上报时间
+    String organ_submitDate;
+
+    // 洗白流水号
+    String whitewash_serial_number;
+
+    // 惩戒周期
+    String disciplinary_cycle;
+
+    // 惩戒结束时间(格式yyyy-mm-DD hh:MM:ss:SSS)
+    String organ_enddate;
+
+    // base64证据图片信息
+    File evidencePic1;
+
+    // 审批人姓名
+    String organ_spName;
+
+    // 审批人身份证号
+    String organ_spCardNumber;
+
+    // 失信行为失信行为(1(1--提取失信行为提取失信行为、、	22--贷款失信行为贷款失信行为	、、33--贷后还款失信行为贷后还款失信行为	、、44--	缴存失信行为缴存失信行为	))
+    String user_bad_behavior;
+
+    // 失信行为细则，多条细则用“，”分隔
+    String bad_behavior_detail;
+
+    // 失信行为细则，多条细则用“，”分隔
+    String bad_level_detail;
+
+    // base64证据图片信息
+    File evidencePic2;
+
+    // base64证据图片信息
+    File evidencePic3;
+
+    // base64证据图片信息
+    File evidencePic4;
+
+    // base64证据图片信息
+    File evidencePic5;
+
+    // base64证据图片信息
+    File evidencePic6;
+
+    // base64证据图片信息
+    File evidencePic7;
+
+    // base64证据图片信息
+    File evidencePic8;
+
+    // base64证据图片信息
+    File evidencePic9;
+
+    // base64证据图片信息
+    File evidencePic10;
+
+    // 失信证据11
+    File evidencePic11;
+
+    // 失信证据12
+    File evidencePic12;
+
+    // 失信证据13
+    File evidencePic13;
+
+    // 失信证据14
+    File evidencePic14;
+
+    // 失信证据15
+    File evidencePic15;
+
+    // 失信证据16
+    File evidencePic16;
+
+    // 失信证据17
+    File evidencePic17;
+
+    // 失信证据18
+    File evidencePic18;
+
+    // 失信证据19
+    File evidencePic19;
+
+    // 失信证据20
+    File evidencePic20;
+
+    // 扩展字段1
+    String expand_field1;
+
+    // 扩展字段2
+    String expand_field2;
+
+    // 扩展字段3
+    String expand_field3;
+
+    // 扩展字段4
+    String expand_field4;
+
+    // 扩展字段5(文件)
+    File expand_field5;
+
+    // 扩展字段6(文件)
+    File expand_field6;
+
+}
+
+PucChainDO {
+    // version，不能为空
+    int version;
+
+    // content，不能为空
+    String content;
+
+    // categoryStr，不能为空
+    String categoryStr;
+
+}
+
